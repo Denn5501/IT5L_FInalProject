@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Initial D Car Rentals</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Hachiroku Rentals</h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Available Cars</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+            <div id="burger-menu" class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Next Adventure Starts Here</h2>
+            <p>Choose from a wide selection of vehicles and make your reservation today!</p>
+            <a href="#cars" class="cta-button">View Available Cars</a>
+        </div>
+    </section>
+
+    <section id="search" class="search-section">
+        <h2>Find Your Perfect Ride</h2>
+        <form action="/search" method="get" class="search-form">
+            <select name="car-type" id="car-type" class="search-select">
+                <option value="">Select Car Type</option>
+                <option value="sports">Sports</option>
+                <option value="luxury">Luxury</option>
+                <option value="classic">Classic</option>
+            </select>
+            <select name="brand" id="brand" class="search-select">
+                <option value="">Select Brand</option>
+                <option value="toyota">Toyota</option>
+                <option value="nissan">Nissan</option>
+                <option value="mazda">Mazda</option>
+            </select>
+            <select name="budget" id="budget" class="search-select">
+                <option value="">Select Budget</option>
+                <option value="0-50">$0 - $50/day</option>
+                <option value="51-100">$51 - $100/day</option>
+                <option value="101-150">$101 - $150/day</option>
+                <option value="150+">$150+/day</option>
+            </select>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </section>
+
+    <section id="cars" class="cars-section">
+        <h2>Available Cars</h2>
+        <div class="car-list">
+            {% for car in cars %}
+            <div class="car-card">
+                <img src="{{ url_for('static', filename='images/' + car.image) }}" alt="{{ car.name }}">
+                <h3>{{ car.name }}</h3>
+                <p>{{ car.price }}</p>
+                <a href="book.html" class="book-button">Book Now</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <div id="about">
+            <h3>About Us</h3>
+            <p>We offer the best car rental deals with a wide variety of vehicles to choose from. Book today!</p>
+        </div>
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@hachirokurentals.com</p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
