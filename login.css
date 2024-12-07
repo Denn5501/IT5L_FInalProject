@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #220f0f, #7a1705ec);
+    background-image: url("login_bg.jpg"), url("462549131_1221249725640562_4264762830747028392_n.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+}
+
+/* Disable fading effect for the login page container */
+.wrapper {
+    animation: none;
+}
+
+/* Title outside the form */
+.site-title {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-style: italic;
+    color: #292824cb;
+    margin-bottom: 50px;
+}
+
+/* Form wrapper */
+.wrapper {
+    width: 450px;
+    background: rgba(165, 142, 142, 0.753); 
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.login-title {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-style: italic;
+    color: #7e6363e5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-box input {
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 30px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #fff;
+}
+
+.show-password-container {
+    display: flex;
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.show-password-container input {
+    margin-left: -162px; 
+}
+
+.show-password-container span {
+    color: #fff;
+    font-size: 16px;
+    margin-left: -172px;
+}
+
+.Remember {
+    margin: 15px;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Register Link Styling */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: #f9a602; /* Or any color for hover effect */
+}

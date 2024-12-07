@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #220f0f, #7a1705ec);
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+header .logo h1 {
+  font-size: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #f9a602;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .cta-button {
+  background-color: #f9a602;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.search-section, .cars-section, footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search-select {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.search-button {
+  background-color: #f9a602;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the cards */
+}
+
+.car-card {
+  width: 250px;
+  margin: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.book-button {
+  background-color: #f9a602;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  nav ul li a {
+      font-size: 18px;
+  }
+
+  .burger-menu {
+      display: flex;
+  }
+
+  .burger-menu.active + ul {
+      display: flex;
+  }
+}
